@@ -53,7 +53,7 @@ class VCcell: UITableViewCell {
     func setupImageView(){
         contentView.addSubview(imageV)
         imageV.anchor(top: contentView.topAnchor, leading: contentView.leadingAnchor, bottom: nil, trailing: nil, padding: UIEdgeInsets.init(top: 5, left: 5, bottom: 0, right: 0), size: CGSize(width: 50 * widthHeightRatio, height: 50))
-        imageV.backgroundColor = UIColor.blue
+//        imageV.backgroundColor = UIColor.blue
     }
     func setupLabelV(){
         contentView.addSubview(self.lableV)
