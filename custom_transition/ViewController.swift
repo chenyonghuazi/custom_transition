@@ -65,6 +65,7 @@ extension ViewController:UITableViewDelegate,UITableViewDataSource{
         return cell
     }
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        tableView.deselectRow(at: indexPath, animated: true)
         let view = detailViewController()
         self.selectedCell = tableView.cellForRow(at: indexPath) as! VCcell
         view.image = self.selectedCell.imageV.image
