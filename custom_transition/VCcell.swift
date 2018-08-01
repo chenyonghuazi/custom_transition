@@ -59,7 +59,7 @@ class VCcell: UITableViewCell {
         contentView.addSubview(self.lableV)
         lableV.anchor(top: nil, leading: imageV.trailingAnchor, bottom: nil, trailing: nil, padding: .init(top: 0, left: 10, bottom: 0, right: 0), size: CGSize(width: 120, height: 50))
         lableV.centerYAnchor.constraint(equalTo: contentView.centerYAnchor).isActive = true
-        lableV.font = UIFont.systemFont(ofSize: 15)
+        lableV.font = UIFont.systemFont(ofSize: 10)
     }
 
 }
