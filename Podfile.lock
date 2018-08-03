@@ -1,0 +1,16 @@
+PODS:
+  - Transition (1.2.0)
+
+DEPENDENCIES:
+  - Transition
+
+SPEC REPOS:
+  https://github.com/CocoaPods/Specs.git:
+    - Transition
+
+SPEC CHECKSUMS:
+  Transition: 22d495b5fd0e14f3f6fd3be53a046a4a42d29654
+
+PODFILE CHECKSUM: 275952a7f122e6e5d2df76af150e31dbc895bb01
+
+COCOAPODS: 1.5.0

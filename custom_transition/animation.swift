@@ -18,9 +18,7 @@ class animation:NSObject,UIViewControllerAnimatedTransitioning{
         guard let fromVC = transitionContext.viewController(forKey: .from) as? ViewController,
             let toVC = transitionContext.viewController(forKey: .to) as? detailViewController,
             let snapshot = fromVC.selectedCell.imageV.snapshotView(afterScreenUpdates: false)
-            else {
-                return
-        }
+            else {return}
         let container = transitionContext.containerView
         snapshot.frame = container.convert(fromVC.selectedCell.imageV.frame, from: fromVC.selectedCell)
         fromVC.selectedCell.imageV.isHidden = true
@@ -40,6 +38,7 @@ class animation:NSObject,UIViewControllerAnimatedTransitioning{
             toVC.imageV.image = toVC.image
             snapshot.removeFromSuperview()
             transitionContext.completeTransition(!transitionContext.transitionWasCancelled)
+            transitionContext.completeTransition(finish)
         }
     }
     

@@ -17,12 +17,18 @@ class ViewController: UIViewController {
     let widthHeightRatio = UIScreen.main.bounds.width / 100
     
     let imageSet = ["0","1","2","3","4","5","6"]
+    
+    override func viewDidAppear(_ animated: Bool) {
+        super.viewDidAppear(animated)
+        self.navigationController?.delegate = self
+    }
 
     override func viewDidLoad() {
         super.viewDidLoad()
-        self.navigationController?.delegate = self
+        
         setupTableView()
         setupNavigation()
+        
     }
 
     override func didReceiveMemoryWarning() {
@@ -79,13 +85,20 @@ extension ViewController:UITableViewDelegate,UITableViewDataSource{
 
 extension ViewController:UINavigationControllerDelegate{
     func navigationController(_ navigationController: UINavigationController, animationControllerFor operation: UINavigationControllerOperation, from fromVC: UIViewController, to toVC: UIViewController) -> UIViewControllerAnimatedTransitioning? {
-        if operation == UINavigationControllerOperation.push {
+        if operation == UINavigationControllerOperation.push && fromVC is ViewController && toVC is detailViewController{
+            print("animation2")
             return animation()
         } else {
             return nil
         }
     }
 }
+
+//extension ViewController:UIViewControllerTransitioningDelegate{
+//    func animationController(forPresented presented: UIViewController, presenting: UIViewController, source: UIViewController) -> UIViewControllerAnimatedTransitioning? {
+//        return animation()
+//    }
+//}
 
 
 
