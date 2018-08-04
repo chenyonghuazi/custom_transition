@@ -18,8 +18,8 @@ class ViewController: UIViewController {
     
     let imageSet = ["0","1","2","3","4","5","6"]
     
-    override func viewDidAppear(_ animated: Bool) {
-        super.viewDidAppear(animated)
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
         self.navigationController?.delegate = self
     }
 
