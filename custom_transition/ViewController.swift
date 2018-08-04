@@ -18,10 +18,15 @@ class ViewController: UIViewController {
     
     let imageSet = ["0","1","2","3","4","5","6"]
     
-    override func viewWillAppear(_ animated: Bool) {
-        super.viewWillAppear(animated)
+    override func viewDidAppear(_ animated: Bool) {
+        super.viewDidAppear(animated)
         self.navigationController?.delegate = self
     }
+    
+//    override func viewDidAppear(_ animated: Bool) {
+//        super.viewDidAppear(animated)
+//        print("Viewcontroller did appear")
+//    }
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -75,6 +80,7 @@ extension ViewController:UITableViewDelegate,UITableViewDataSource{
         let view = detailViewController()
         self.selectedCell = tableView.cellForRow(at: indexPath) as! VCcell
         view.image = self.selectedCell.imageV.image
+        
         self.navigationController?.pushViewController(view, animated: true)
     }
     func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {

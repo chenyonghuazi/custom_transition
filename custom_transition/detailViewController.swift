@@ -31,12 +31,16 @@ class detailViewController: UIViewController {
     
     var image:UIImage!
     
-    override func viewWillAppear(_ animated: Bool) {
-        super.viewWillAppear(animated)
+    override func viewDidAppear(_ animated: Bool) {
+        super.viewDidAppear(animated)
         self.navigationController?.delegate = self
 //        view.alpha = 1
     }
 
+//    override func viewDidAppear(_ animated: Bool) {
+//        super.viewDidAppear(animated)
+//        print("detailVC did appear")
+//    }
     override func viewDidLoad() {
         super.viewDidLoad()
         view.addSubview(imageV)
