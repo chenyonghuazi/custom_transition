@@ -23,10 +23,11 @@ class ViewController: UIViewController {
         self.navigationController?.delegate = self
     }
     
-//    override func viewDidAppear(_ animated: Bool) {
-//        super.viewDidAppear(animated)
-//        print("Viewcontroller did appear")
-//    }
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
+        print("Viewcontroller will appear")
+        animateTableView()
+    }
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -89,6 +90,10 @@ extension ViewController:UITableViewDelegate,UITableViewDataSource{
     
 }
 
+
+
+
+
 extension ViewController:UINavigationControllerDelegate{
     func navigationController(_ navigationController: UINavigationController, animationControllerFor operation: UINavigationControllerOperation, from fromVC: UIViewController, to toVC: UIViewController) -> UIViewControllerAnimatedTransitioning? {
         if operation == UINavigationControllerOperation.push && fromVC is ViewController && toVC is detailViewController{
@@ -100,11 +105,23 @@ extension ViewController:UINavigationControllerDelegate{
     }
 }
 
-//extension ViewController:UIViewControllerTransitioningDelegate{
-//    func animationController(forPresented presented: UIViewController, presenting: UIViewController, source: UIViewController) -> UIViewControllerAnimatedTransitioning? {
-//        return animation()
-//    }
-//}
+extension ViewController{
+    
+    func animateTableView(){
+        let cells = tableV.visibleCells
+        for cell in cells{
+            cell.transform = CGAffineTransform(translationX: 0, y: UIScreen.main.bounds.height)
+        }
+        var delayCounter = 0
+        for cell in cells {
+            UIView.animate(withDuration: 1.75, delay: Double(delayCounter) * 0.05, usingSpringWithDamping: 0.8, initialSpringVelocity: 0, options: .curveEaseInOut, animations: {
+                cell.transform = CGAffineTransform.identity
+            }, completion: nil)
+            delayCounter += 1
+        }
+        
+    }
+}
 
 
 

@@ -19,6 +19,8 @@
 		E8B941C42112381A000D8E5A /* LBT.swift in Sources */ = {isa = PBXBuildFile; fileRef = E8B941C32112381A000D8E5A /* LBT.swift */; };
 		E8B941C621123868000D8E5A /* detailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E8B941C521123868000D8E5A /* detailViewController.swift */; };
 		E8B941C82112388A000D8E5A /* VCcell.swift in Sources */ = {isa = PBXBuildFile; fileRef = E8B941C72112388A000D8E5A /* VCcell.swift */; };
+		E8EB1C8B2115D2DE0039D4FC /* tableViewAnimator.swift in Sources */ = {isa = PBXBuildFile; fileRef = E8EB1C8A2115D2DE0039D4FC /* tableViewAnimator.swift */; };
+		E8EB1C8D2115D51B0039D4FC /* welComeScreen.swift in Sources */ = {isa = PBXBuildFile; fileRef = E8EB1C8C2115D51B0039D4FC /* welComeScreen.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -38,6 +40,8 @@
 		E8B941C32112381A000D8E5A /* LBT.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LBT.swift; sourceTree = "<group>"; };
 		E8B941C521123868000D8E5A /* detailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = detailViewController.swift; sourceTree = "<group>"; };
 		E8B941C72112388A000D8E5A /* VCcell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VCcell.swift; sourceTree = "<group>"; };
+		E8EB1C8A2115D2DE0039D4FC /* tableViewAnimator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = tableViewAnimator.swift; sourceTree = "<group>"; };
+		E8EB1C8C2115D51B0039D4FC /* welComeScreen.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = welComeScreen.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -91,6 +95,7 @@
 			isa = PBXGroup;
 			children = (
 				E824638521109FB70010A1C7 /* AppDelegate.swift */,
+				E8EB1C8C2115D51B0039D4FC /* welComeScreen.swift */,
 				E824638721109FB70010A1C7 /* ViewController.swift */,
 				E8B941C72112388A000D8E5A /* VCcell.swift */,
 				E8B941C521123868000D8E5A /* detailViewController.swift */,
@@ -102,6 +107,7 @@
 				E82463972110A02C0010A1C7 /* animation.swift */,
 				E8B941C32112381A000D8E5A /* LBT.swift */,
 				E881443F21138E4300AE0763 /* roundButtonTransition.swift */,
+				E8EB1C8A2115D2DE0039D4FC /* tableViewAnimator.swift */,
 			);
 			path = custom_transition;
 			sourceTree = "<group>";
@@ -222,6 +228,8 @@
 				E881444021138E4300AE0763 /* roundButtonTransition.swift in Sources */,
 				E82463982110A02C0010A1C7 /* animation.swift in Sources */,
 				E8B941C82112388A000D8E5A /* VCcell.swift in Sources */,
+				E8EB1C8D2115D51B0039D4FC /* welComeScreen.swift in Sources */,
+				E8EB1C8B2115D2DE0039D4FC /* tableViewAnimator.swift in Sources */,
 				E8B941C42112381A000D8E5A /* LBT.swift in Sources */,
 				E8B941C621123868000D8E5A /* detailViewController.swift in Sources */,
 				E830CA0E2114EC4100DD7100 /* ClickRoundButtonVC.swift in Sources */,
